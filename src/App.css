@@ -98,6 +98,28 @@ button[disabled]{
   color: gray;
 }
 
+.loading{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  animation: bottom-to-top 1s ease-in-out forwards;
+}
+
+@keyframes bottom-to-top {
+  0%{
+    transform: translateY(40%);
+  }
+
+  66%{
+    transform: translateY(70%);
+  }
+
+  100%{
+    transform: translateY(65%);
+  }  
+}
+
 @media (max-width: 1500px) {
   .computer-hand{
     width: 225px;
@@ -105,6 +127,20 @@ button[disabled]{
   
   .user-hand{
     width: 225px;
+  }
+
+  @keyframes bottom-to-top {
+    0%{
+      transform: translateY(70%);
+    }
+  
+    66%{
+      transform: translateY(100%);
+    }
+  
+    100%{
+      transform: translateY(95%);
+    }  
   }
 }
 
@@ -119,5 +155,22 @@ button[disabled]{
 
   .result{
     font-size:large;
+  }
+  .loading{
+    width: 100%;
+  }
+
+  @keyframes bottom-to-top {
+    0%{
+      transform: translateY(120%);
+    }
+  
+    66%{
+      transform: translateY(150%);
+    }
+  
+    100%{
+      transform: translateY(145%);
+    }  
   }
 }
