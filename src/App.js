@@ -1,6 +1,7 @@
 import matchers from "@testing-library/jest-dom/matchers";
 import { generate } from "@vue/compiler-core";
 import { useState, useEffect } from "react";
+import AnimatedPage from "./AnimatedPage";
 import "./App.css";
 
 function App() {
@@ -70,60 +71,84 @@ function App() {
 
   const resultText = (turnResult) => {
     let responseText = [];
-    if(turnResult === "user"){
-      responseText = ["Easy Meat", "Blow-Off", "A Piece of Cake", "In the Bag"]
-    } else if(turnResult === "computer"){
-      responseText = ["Don't Quit Trying", "Never Say Die"]
-    } else if(turnResult === "draw") {
-        responseText = ["At Least You Tried", "Keep Trying"]
+    if (turnResult === "user") {
+      responseText = ["Easy Meat", "Blow-Off", "A Piece of Cake", "In the Bag"];
+    } else if (turnResult === "computer") {
+      responseText = ["Don't Quit Trying", "Never Say Die"];
+    } else if (turnResult === "draw") {
+      responseText = ["At Least You Tried", "Keep Trying"];
     }
-    return <h1 className={turnResult}>{responseText[Math.floor(Math.random() * responseText.length)]}</h1>;
+    return (
+      <h1 className={turnResult}>
+        {responseText[Math.floor(Math.random() * responseText.length)]}
+      </h1>
+    );
   };
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1200);
+  }, []);
 
   return (
     <div className="App">
-      <h1 className="heading">Rock Paper Scissors</h1>
-
-      <div className="score">
-        <h1>You: {userPoints}</h1>
-        <h1>Computer: {computerPoints}</h1>
-      </div>
-
-      <div className="choice">
-        <div className="choice-user">
-          <img className="user-hand" src={`../img/${userChoice}.png`} />
-        </div>
-        <div className="choice-computer">
-          <img className="computer-hand" src={`../img/${computerChoice}.png`} />
-        </div>
-      </div>
-
-      <div className="button-div">
-        {choices.map((choice, index) => (
-          <button
-            className="button"
-            key={index}
-            onClick={() => handleOnClick(choice)}
-            disabled={gameOver}
-          >
-            {choice}
-          </button>
-        ))}
-      </div>
-
-      <div className="turnResult">
-        {!gameOver && resultText(turnResult)}
-      </div>
-
-      <div className="result">{gameOver && <h1 className={turnResult}>{result}</h1>}</div>
-
-      <div className="button-div">
-        {gameOver && (
-          <button className="button btn-restart" onClick={() => reset()}>
-            Restart Game?
-          </button>
-        )}
-      </div>
+      {loading ? (
+        <img
+          className="loading"
+          src={require(`./loading.png`)}
+        />
+      ) : (
+        <AnimatedPage>
+          <h1 className="heading">Rock Paper Scissors</h1>
+          <div className="score">
+            <h1>You: {userPoints}</h1>
+            <h1>Computer: {computerPoints}</h1>
+          </div>
+          <div className="choice">
+            <div className="choice-user">
+              <img
+                className="user-hand"
+                src={require(`../public/img/${userChoice}.png`)}
+              />
+            </div>
+            <div className="choice-computer">
+              <img
+                className="computer-hand"
+                src={require(`../public/img/${computerChoice}.png`)}
+              />
+            </div>
+          </div>
+          <div className="button-div">
+            {choices.map((choice, index) => (
+              <button
+                className="button"
+                key={index}
+                onClick={() => handleOnClick(choice)}
+                disabled={gameOver}
+              >
+                {choice}
+              </button>
+            ))}
+          </div>
+          <div className="turnResult">
+            {!gameOver && resultText(turnResult)}
+          </div>
+          <div className="result">
+            {gameOver && <h1 className={turnResult}>{result}</h1>}
+          </div>
+          <div className="button-div">
+            {gameOver && (
+              <button className="button btn-restart" onClick={() => reset()}>
+                Restart Game?
+              </button>
+            )}
+          </div>
+        </AnimatedPage>
+      )}
     </div>
   );
 }
