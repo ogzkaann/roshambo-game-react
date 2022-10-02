@@ -1,38 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+  background-color: antiquewhite;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading{
+  font-size: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.score{
+  height: 20vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+}
+
+.choice{
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.computer-hand{
+  width: 350px;
+}
+
+.user-hand{
+  width: 350px;
+  transform: rotateY(180deg);
+}
+
+.button-div{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.button{
+  width: 150px;
+  height: 50px;
+  font-size: medium;
+  margin-right: 2px;
+  justify-content: space-around;
+  align-items: center;
+  background-color:chocolate;
+  color: azure;
+  border-radius: 5px;
+  border: 1px solid chocolate;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:hover {
+  font-size: larger;
+  border: 1px solid coral;
+  background-color:crimson;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+button:disabled,
+button[disabled]{
+  font-size: medium;
+  border: 1px solid darkred;
+  background-color:darkred;
+  color: #666666;
+}
+
+.btn-restart{
+  width: 250px;
+}
+
+.turnResult{
+  padding: 25px;
+}
+
+.result{
+  padding: 50px;
+  font-size:xx-large;
+}
+
+.user{
+  color: green;
+}
+
+.computer{
+  color: red;
+}
+
+.draw{
+  color: gray;
+}
+
+@media (max-width: 1500px) {
+  .computer-hand{
+    width: 225px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .user-hand{
+    width: 225px;
+  }
+}
+
+@media (max-width: 575px) {
+  .computer-hand{
+    width: 200px;
+  }
+  
+  .user-hand{
+    width: 200px;
+  }
+
+  .result{
+    font-size:large;
   }
 }
