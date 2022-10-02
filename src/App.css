@@ -154,6 +154,7 @@ button[disabled]{
   }
 
   .result{
+    padding: 20px;
     font-size:large;
   }
   .loading{
