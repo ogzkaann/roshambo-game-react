@@ -1,3 +1,13 @@
+# React Roshambo Game
+
+<p align="center">
+  <a href="https://ogzkaann.github.io/roshambo-game-react">
+    <img border="0" alt="roshambo-game" src="/public/react-roshambo-game.gif">
+  </a>
+  
+  **[Click Here To Play!](https://ogzkaann.github.io/roshambo-game-react)**
+</p>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
