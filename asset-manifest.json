@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/roshambo-game-react/static/css/main.b56f222b.css",
+    "main.css": "/roshambo-game-react/static/css/main.abb5402b.css",
     "main.js": "/roshambo-game-react/static/js/main.846cd63b.js",
     "static/js/787.3afb3827.chunk.js": "/roshambo-game-react/static/js/787.3afb3827.chunk.js",
     "static/media/loading.png": "/roshambo-game-react/static/media/loading.926f101c52b3328c82df.png",
     "index.html": "/roshambo-game-react/index.html",
-    "main.b56f222b.css.map": "/roshambo-game-react/static/css/main.b56f222b.css.map",
+    "main.abb5402b.css.map": "/roshambo-game-react/static/css/main.abb5402b.css.map",
     "main.846cd63b.js.map": "/roshambo-game-react/static/js/main.846cd63b.js.map",
     "787.3afb3827.chunk.js.map": "/roshambo-game-react/static/js/787.3afb3827.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b56f222b.css",
+    "static/css/main.abb5402b.css",
     "static/js/main.846cd63b.js"
   ]
 }
