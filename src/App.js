@@ -91,10 +91,10 @@ function App() {
 
       <div className="choice">
         <div className="choice-user">
-          <img className="user-hand" src={`../img/${userChoice}.png`} />
+          <img className="user-hand" src={`../public/img/${userChoice}.png`} />
         </div>
         <div className="choice-computer">
-          <img className="computer-hand" src={`../img/${computerChoice}.png`} />
+          <img className="computer-hand" src={`../public/img/${computerChoice}.png`} />
         </div>
       </div>
 
