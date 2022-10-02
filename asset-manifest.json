@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/roshambo-game-react/static/css/main.87de5964.css",
+    "main.js": "/roshambo-game-react/static/js/main.f57aa1be.js",
+    "static/js/787.3afb3827.chunk.js": "/roshambo-game-react/static/js/787.3afb3827.chunk.js",
+    "index.html": "/roshambo-game-react/index.html",
+    "main.87de5964.css.map": "/roshambo-game-react/static/css/main.87de5964.css.map",
+    "main.f57aa1be.js.map": "/roshambo-game-react/static/js/main.f57aa1be.js.map",
+    "787.3afb3827.chunk.js.map": "/roshambo-game-react/static/js/787.3afb3827.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87de5964.css",
+    "static/js/main.f57aa1be.js"
+  ]
+}
